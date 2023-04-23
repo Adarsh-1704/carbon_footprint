@@ -155,7 +155,7 @@ class Tabbar extends Component {
           className="mb-3"
           fill
         >
-          <Tab eventKey="home" title={<span><HomeIcon />Hosehold</span>}>
+          <Tab eventKey="home" title={<span><HomeIcon />Household</span>}>
             <Home handler = {this.homeHandler}/>
           </Tab>
           <Tab eventKey="travel" title={<span><SubwayIcon /> Travel</span>}>
