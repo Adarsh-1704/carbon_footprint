@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/carbon_footprint/static/css/main.ab5499f5.css",
+    "main.js": "/carbon_footprint/static/js/main.4128b40f.js",
+    "static/js/787.cda612ba.chunk.js": "/carbon_footprint/static/js/787.cda612ba.chunk.js",
+    "static/media/pic3.png": "/carbon_footprint/static/media/pic3.8dcb570f9a169e8378cf.png",
+    "static/media/pic1.png": "/carbon_footprint/static/media/pic1.009247a240e8186867c4.png",
+    "static/media/pic2.png": "/carbon_footprint/static/media/pic2.ae0efb519fe1b6bb2f7e.png",
+    "static/media/carbon-footprint-1.png": "/carbon_footprint/static/media/carbon-footprint-1.f3ca42f8b6b594a26b9f.png",
+    "static/media/Adarsh.png": "/carbon_footprint/static/media/Adarsh.5975efcf02a85559feb8.png",
+    "static/media/deforestation.jfif": "/carbon_footprint/static/media/deforestation.ec515b2fd1295c2401d7.jfif",
+    "static/media/carbon-footprint-2.jpg": "/carbon_footprint/static/media/carbon-footprint-2.3f43868052903ba4d96a.jpg",
+    "static/media/ghg.png": "/carbon_footprint/static/media/ghg.60fcf6fd0dd8b7be1d22.png",
+    "static/media/climate-1.jpg": "/carbon_footprint/static/media/climate-1.d9dac7069edc4bbffa20.jpg",
+    "static/media/Mohil.jpeg": "/carbon_footprint/static/media/Mohil.9a0895ac59a2de347b66.jpeg",
+    "static/media/Ankit.jpg": "/carbon_footprint/static/media/Ankit.f13ed3d5f2aadef0d98b.jpg",
+    "static/media/sustainable.jpg": "/carbon_footprint/static/media/sustainable.6af5adf6edbe84ad4e52.jpg",
+    "static/media/Abhay.jpeg": "/carbon_footprint/static/media/Abhay.87a08ac250994cbf6ad9.jpeg",
+    "static/media/Akash.jpeg": "/carbon_footprint/static/media/Akash.ea16372696f357119210.jpeg",
+    "static/media/ocean.jpg": "/carbon_footprint/static/media/ocean.aea343c850edb6a9f94a.jpg",
+    "static/media/Ishan.jpeg": "/carbon_footprint/static/media/Ishan.b953eb6064cee8aecc89.jpeg",
+    "static/media/sustainable-1.jpg": "/carbon_footprint/static/media/sustainable-1.f01c9974b7ec925cb610.jpg",
+    "static/media/logo.jpg": "/carbon_footprint/static/media/logo.07044cd8e9f7099d4b76.jpg",
+    "static/media/Anuvrat.jpeg": "/carbon_footprint/static/media/Anuvrat.e264d2102b1e1a7f9d7c.jpeg",
+    "static/media/volcano.jpg": "/carbon_footprint/static/media/volcano.e10431bf3881d548d049.jpg",
+    "static/media/sustainable-2.jpg": "/carbon_footprint/static/media/sustainable-2.0478b54a73125e76a896.jpg",
+    "static/media/sustainable-3.jpg": "/carbon_footprint/static/media/sustainable-3.65a2bbac250cf1b559e0.jpg",
+    "static/media/napcc.jpg": "/carbon_footprint/static/media/napcc.2122e8d263035039111e.jpg",
+    "static/media/vegetable.jpg": "/carbon_footprint/static/media/vegetable.72682a016f1be9a2f79c.jpg",
+    "index.html": "/carbon_footprint/index.html",
+    "main.ab5499f5.css.map": "/carbon_footprint/static/css/main.ab5499f5.css.map",
+    "main.4128b40f.js.map": "/carbon_footprint/static/js/main.4128b40f.js.map",
+    "787.cda612ba.chunk.js.map": "/carbon_footprint/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab5499f5.css",
+    "static/js/main.4128b40f.js"
+  ]
+}
