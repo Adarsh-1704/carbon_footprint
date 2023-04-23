@@ -6,8 +6,6 @@ import Deforestation from "./components/information/Deforestation";
 import Climate from "./components/information/Climate"
 import AboutUs from "./components/aboutUs/AboutUs";
 import ContactForm from "./components/contactForm/contactform";
-
-import BarGraph from './components/homePageComponents/BarGraph'
 import Sustainable from "./components/information/Sustainable";
 import FrontPage from "./components/frontPage/FrontPage";
 import References from "./components/information/References";
@@ -19,7 +17,7 @@ function App() {
     <div className="App">
       
       
-      <Router>
+      <Router basename="/carbon_footprint">
       <NavBar className='navbar' />
         <Routes>
 

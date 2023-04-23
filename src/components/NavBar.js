@@ -15,22 +15,22 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navs">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/calculator">Calculator</Nav.Link>
-            <Nav.Link href="/aboutus">About Us</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/carbon_footprint">Home</Nav.Link>
+            <Nav.Link href="/carbon_footprint/calculator">Calculator</Nav.Link>
+            <Nav.Link href="/carbon_footprint/aboutus">About Us</Nav.Link>
+            <Nav.Link href="/carbon_footprint/contact">Contact</Nav.Link>
 
             <NavDropdown title="Information" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/information/deforestaion">
+              <NavDropdown.Item href="/carbon_footprint/information/deforestaion">
                 Deforestation
               </NavDropdown.Item>
-              <NavDropdown.Item href="/information/sustainable-development">
+              <NavDropdown.Item href="/carbon_footprint/information/sustainable-development">
                 Sustainable Development Goals
               </NavDropdown.Item>
-              <NavDropdown.Item href="/information/climate">
+              <NavDropdown.Item href="/carbon_footprint/information/climate">
                 Climate Changes
               </NavDropdown.Item>
-              <NavDropdown.Item href="/information/references">
+              <NavDropdown.Item href="/carbon_footprint/information/references">
                 References
               </NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
