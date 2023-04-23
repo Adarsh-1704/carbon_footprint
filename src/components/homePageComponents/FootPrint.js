@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import BarGraph from "./BarGraph";
 import StackedBarGraph from "./StackedBar";
@@ -27,7 +27,7 @@ function FootPrint(props) {
     } else if (curr === "Travel") {
       setData(travelData);
       setLabels(travelLabels);
-    } else if (curr == "Food") {
+    } else if (curr === "Food") {
       setData(foodData);
       setLabels(foodLabels);
     } else {

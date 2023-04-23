@@ -29,7 +29,7 @@ class Food extends Component {
             <InputCard
             icon={<img src={milk} alt="hellow" style={{ width: "50px", height: "50px", marginRight: "10px" }} />}
             title="Dairy"
-            units={["kg/day"]}
+            units={["gm/day"]}
             handler={this.handler}
             />
           </Col>

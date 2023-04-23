@@ -10,7 +10,7 @@ function Goals() {
       <Row className="my-5">
         <Col className="card" md={{ span: 2 , offset: 1}}>
           <div className="imgBox">
-            <img className="sustainable" src={sustainable_1} />
+            <img alt="img" className="sustainable" src={sustainable_1} />
           </div>
           <div className="content">
             <h2>No Poverty</h2>
@@ -24,7 +24,7 @@ function Goals() {
 
         <Col className="card" md={{ span: 2, offset: 1 }}>
           <div className="imgBox">
-            <img className="sustainable" src={sustainable_2} />
+            <img alt="img" className="sustainable" src={sustainable_2} />
           </div>
           <div className="content">
             <h2>Climate Action</h2>
@@ -38,7 +38,7 @@ function Goals() {
 
         <Col className="card" md={{ span: 2, offset: 1 }}>
           <div className="imgBox">
-            <img className="sustainable" src={sustainable_3} />
+            <img alt="img" className="sustainable" src={sustainable_3} />
           </div>
           <div className="content">
             <h2>Affordable and Clean Energy</h2>
@@ -52,7 +52,7 @@ function Goals() {
       {/* <Row className="my-4">
         <Col className="card" md={{ span: 2, offset: 1 }}>
           <div className="imgBox">
-            <img className="sustainable" src={sustainable_3} />
+            <img alt="img" className="sustainable" src={sustainable_3} />
           </div>
           <div className="content">
             <h2>Affordable and Clean Energy</h2>
@@ -64,7 +64,7 @@ function Goals() {
         </Col>
         <Col className="card" md={{ span: 2, offset: 1 }}>
           <div className="imgBox">
-            <img className="sustainable" src={sustainable_3} />
+            <img alt="img" className="sustainable" src={sustainable_3} />
           </div>
           <div className="content">
             <h2>Affordable and Clean Energy</h2>
@@ -76,7 +76,7 @@ function Goals() {
         </Col>
         <Col className="card" md={{ span: 2, offset: 1 }}>
           <div className="imgBox">
-            <img className="sustainable" src={sustainable_3} />
+            <img alt="img" className="sustainable" src={sustainable_3} />
           </div>
           <div className="content">
             <h2>Affordable and Clean Energy</h2>

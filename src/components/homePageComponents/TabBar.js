@@ -172,9 +172,9 @@ class Tabbar extends Component {
            <Action totalData = {this.state.total} homeData = {this.state.home} travelData = {this.state.travel} foodData = {this.state.food}/>
           </Tab>
         </Tabs>
-        <div className="d-flex justify-content-between mb-3">
-          <Button onClick={this.handlePrev} disabled={this.state.activeKey === 'home'}>Prev</Button>
-          <Button onClick={this.handleNext} disabled={this.state.activeKey === 'action'}>Next</Button>
+        <div className="d-flex justify-content-center mb-3">
+          <Button className='m-1' onClick={this.handlePrev} disabled={this.state.activeKey === 'home'}>Prev</Button>
+          <Button className='m-1' onClick={this.handleNext} disabled={this.state.activeKey === 'action'}>Next</Button>
         </div>
         
       </>

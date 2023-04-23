@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <div>
       <Carousels />
-      <Container >
+      <Container className="mt-5" style={{border: "1px solid black"}}>
         <h1 style={{textAlign : "center"}} className="mx-5 my-5">CARBON FOOTPRINT CALCULATOR</h1>
         <TabBar />
       </Container>

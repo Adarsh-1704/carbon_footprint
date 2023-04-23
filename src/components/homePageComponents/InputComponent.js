@@ -82,19 +82,19 @@ function InputComponent(props) {
       else if (title === "Dairy") {
           switch (dairyItem) {
             case "Butter":
-              res = v * 12.53 * 30
+              res = v * 12.53 * 30/1000
               break;
             case "Cheese":
-              res = v * 6.85 * 30
+              res = v * 6.85 * 30/1000
               break;
             case "Milk":
               res = (0.35/4) * v * 30
               break;
             case "Paneer":
-              res = v * 6.32 * 30
+              res = v * 6.32 * 30/1000
               break;
             case "Yoghurt":
-              res = v * 1.95 * 30
+              res = v * 1.95 * 30/1000
               break;
             default:
               break;
@@ -150,10 +150,8 @@ function InputComponent(props) {
       else if(title === "Fish"){
         res = 1.17 * v * 4.2857
       }
-      console.log(v)
       // console.log(res)
       setResult(res);
-      console.log(result)
  
       sumHandler(res - prevRes);
     };

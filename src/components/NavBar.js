@@ -9,7 +9,7 @@ function NavBar() {
     <Navbar className="navbar" sticky="top">
       <Container>
         <Navbar.Brand>
-          <img src={navLogo} alt="" />
+          <img src={navLogo} style={{height:"35px"}} alt="navLogo" />
           FootprintFinder
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

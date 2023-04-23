@@ -1,8 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
-import ActionCard from "../ActionCard";
-
 function Action(props) {
   const totalData = props.totalData;
   const homeData = props.homeData;
@@ -12,9 +10,9 @@ function Action(props) {
 
   // let mx = Math.max(totalData[0], Math.max(totalData[1], totalData[2]));
   let ElecContent =
-    "Hurrah! Your carbon emissions are lower than harmful due to electricity";
+    <h2 className="text-center">Hurrah! Your carbon emissions are lower than harmful due to electricity</h2>;
   let FoodContent =
-    "Hurrah! Your carbon emissions are lower than harmful due to food";
+    <h2 className="text-center">Hurrah! Your carbon emissions are lower than harmful due to food</h2>;
   // if (mx == totalData[0]) {
   //   heading = <h1>Maximum emission due to Hosehold</h1>;
   // } else if (mx == totalData[1]) {
@@ -25,11 +23,11 @@ function Action(props) {
   if (homeData[0] > 61.38 * 1.05) {
     ElecContent = (
       <div>
-        <h2>You are not using electricity efficiently</h2>
-        <p>
+        <h2 className="text-center">You are not using electricity efficiently</h2>
+        <h5 className="text-center">
           Here are some sugession for reducing your carbon footprint due to
           electricity
-        </p>
+        </h5>
         <ul>
           <li>
             Reduce Phantom Power: There may be some electricity usage by
@@ -67,10 +65,10 @@ function Action(props) {
   if (totalData[2] > 183 * 1.05) {
     FoodContent = (
       <div>
-        <h2>Your carbon foot print due to food is higher that average</h2>
-        <p>
+        <h2 className="text-center">Your carbon foot print due to food is higher that average</h2>
+        <h5 className="text-center">
           Here are some sugession for reducing your carbon footprint due to food
-        </p>
+        </h5>
         <ul>
           <li>
             Eat a plant-based diet: A plant-based diet has a significantly lower
@@ -108,14 +106,12 @@ function Action(props) {
   }
 
   return (
-    <Container>
-      <Row className="justify-ElecContent-md-center my-5">
+      <Row className="justify-content-md-center my-5">
         <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
-          <Card className="shadow-sm p-4">{ElecContent}</Card>
-          <Card className="shadow-sm p-4">{FoodContent}</Card>
+          <Card className="shadow-sm p-4 m-3">{ElecContent}</Card>
+          <Card className="shadow-sm p-4 m-3">{FoodContent}</Card>
         </Col>
       </Row>
-    </Container>
   );
 }
 
