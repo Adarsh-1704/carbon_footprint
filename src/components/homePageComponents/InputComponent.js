@@ -1,0 +1,303 @@
+import React, { useEffect, useState } from "react";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import ListGroup from "react-bootstrap/ListGroup";
+
+function InputComponent(props) {
+
+  const [value, setValue] = useState(0);
+  const [result, setResult] = useState(0);
+  const [milageValue, setMilageValue] = useState(1);
+
+  const title = props.title;
+  const units = props.units;
+  const fuels = ["Petrol", "Diesel", "CNG", "Electric"]
+  const BusFuels = ["Diesel" , "CNG" , "Electric"]
+  const dairyItems = ["Butter", "Cheese", "Milk", "Paneer", "Yoghurt"]
+  const [unit, setUnit] = useState(units[0]);
+  const [fuel, setFuel] = useState(fuels[0]);
+  const [dairyItem, setDairyItem] = useState(dairyItems[0]);
+  const [busFuel , setBusFuel] = useState(BusFuels[0])
+  const [unitOptions, setUnitOptions] = useState(units);
+  const [mileage , setMileage] = useState(<></>)
+
+
+  const sumHandler = props.sumHandler;
+
+  useEffect(() => {
+    const Calculator = (title, unit, fuel,dairyItem, busFuel, milageValue, v, setResult ) => {
+
+      let res = 0
+      let prevRes = result
+      if (title === "LPG") {
+        if (unit === "cylinder/month") res = v * 34.7733;
+        else res = v * 1.2494;
+
+      }
+      else if (title === "Electricity") {
+        if (unit === "Rs./month") res = v;
+        else res = 0.93 * v
+
+      }
+      else if (title === "Water Usage") {
+        if (unit === "Rs./month") res = v;
+        else res = 0.000422 * v;
+      }
+
+      else if (title === "Private Vehicle") {
+        if (unit === "litre/month") {
+          switch (fuel) {
+            case "Diesel":
+              res = 2.6972 * v
+              break;
+            case "Petrol":
+              res = 1.9313 * v
+              break;
+            case "CNG":
+              res = 0.0019 * v
+              break;
+            default:
+              break;
+          }
+        }
+        else {
+          switch (fuel) {
+            case "Diesel":
+              res = 2.6972 * v / milageValue
+              break;
+            case "Petrol":
+              res = 1.9313 * v / milageValue
+              break;
+            case "CNG":
+              res = 0.0019 * v / milageValue
+              break;
+            case "Electric" :
+              res = 0.93 * v / milageValue
+              break;
+            default:
+              break;
+          }
+        }
+      }
+      else if (title === "Dairy") {
+          switch (dairyItem) {
+            case "Butter":
+              res = v * 12.53 * 30
+              break;
+            case "Cheese":
+              res = v * 6.85 * 30
+              break;
+            case "Milk":
+              res = (0.35/4) * v * 30
+              break;
+            case "Paneer":
+              res = v * 6.32 * 30
+              break;
+            case "Yoghurt":
+              res = v * 1.95 * 30
+              break;
+            default:
+              break;
+          }
+        
+      }
+      else if (title === "Bus") {
+        switch (busFuel) {
+          case "Diesel":
+            res = (0.5152 * v) / 40
+            break;
+          case "CNG":
+            res = (0.0019 * v) / (40 * 1.1)
+            break;
+           
+          case "Electric":
+            res = 0.015 * v
+            break;
+          default:
+            break;
+        }
+      }
+      else if (title === "Train") {
+        res = 0.00794 * v
+      }
+      else if (title === "Metro") {
+        res = 0.0079 * v
+      }
+      else if (title === "Flight") {
+        res = 0.121 * v
+      }
+      else if(title === "Chapati"){
+        res = 0.0162 * v * 30
+      }
+      else if(title === "Rice"){
+        res = 0.322 *v *30
+      }
+      else if(title === "Vegetables"){
+        res = 0.2 * v * 30
+      }
+      else if(title === "Egg" ){
+        res = 0.056 * v * 30
+      }
+      else if(title === "Milk"){
+        res = (0.35/4) * v * 30
+      }
+      else if(title === "Chicken"){
+        res = 6.9 * v * 4.2857
+      }
+      else if(title === "Mutton"){
+        res = 85.57 * v * 4.2857
+      }
+      else if(title === "Fish"){
+        res = 1.17 * v * 4.2857
+      }
+      console.log(v)
+      // console.log(res)
+      setResult(res);
+      console.log(result)
+ 
+      sumHandler(res - prevRes);
+    };
+    Calculator(title, unit, fuel, dairyItem, busFuel, milageValue, value, setResult );
+
+  }, [title, unit, fuel, dairyItem, busFuel , milageValue, value, result ])
+
+
+
+  useEffect(() => {
+    if(unit === "km/month" && title === "Private Vehicle"){
+      setMileage(<Form.Control
+        aria-label="Text input with dropdown button"
+        type="number"
+        placeholder={fuel === "Electric" ? "Enter mileage in km/kwh" : "enter mileage in km/litre"}
+        onChange={getMilageData}
+      />)
+    }
+    else{
+      setMileage(<></>)
+    }
+  }, [unit, fuel]);
+
+  const getMilageData = (ele) => {
+    setMilageValue(ele.target.value);
+  };
+
+  const fuelDropDownhandler = (ele) => {
+    const selectedFuel = ele.target.value;
+    setFuel(selectedFuel);
+
+    if (selectedFuel === "Electric") {
+      setUnitOptions(["km/month"]);
+      setUnit("km/month");
+    } 
+    else if(selectedFuel === "Milk") {
+      setUnitOptions(["glass/day"]);
+      setUnit("glass/day");
+    }
+    else {
+      setUnitOptions(units);  
+    }
+  };
+
+  const dairyDropDownhandler = (ele) => {
+    const selectedDairy = ele.target.value;
+    setDairyItem(selectedDairy);
+
+    if(selectedDairy === "Milk") {
+      setUnitOptions(["glass/day"]);
+      setUnit("glass/day");
+    }
+    else {
+      setUnitOptions(units);  
+    }
+  };
+
+  const busFuelDropDownhandler = (ele) => {
+    const selectedFuel = ele.target.value;
+    setBusFuel(selectedFuel);
+
+
+  };
+
+  const unitHandler = (ele) => {
+    const selectedUnit = ele.target.value;
+    setUnit(selectedUnit);
+  
+  };
+  
+  const getData = (ele) => {
+     ele.preventDefault()
+    let v = ele.target.value
+    if (isNaN(v) | v < 0) {
+      return false
+    }
+    setValue(v)
+    return true
+  };
+
+  let fuelDrop
+
+  if (title === "Private Vehicle" ) {
+    fuelDrop = <select
+      className="dropdown"
+      onChange={fuelDropDownhandler}
+    >
+      {fuels.map((currElement) => {
+        return <option key={currElement}>{currElement}</option>;
+      })}
+    </select>
+  }
+  let bus
+  if (title === "Bus") {
+    bus = <select
+      className="dropdown"
+      onChange={busFuelDropDownhandler}
+    >
+      {BusFuels.map((currElement) => {
+        return <option key={currElement}>{currElement}</option>;
+      })}
+    </select>
+  }
+
+  let dairyDrop
+  if (title === "Dairy" ) {
+    dairyDrop = <select
+      className="dropdown"
+      onChange={dairyDropDownhandler}
+    >
+      {dairyItems.map((currElement) => {
+        return <option key={currElement}>{currElement}</option>;
+      })}
+    </select>
+  }
+
+  return (
+    <div>
+      <ListGroup variant="flush">
+        <ListGroup.Item>
+          <InputGroup className="mb-3 my-3">
+            {fuelDrop}
+            {mileage}
+            {dairyDrop}
+            {bus}
+            <Form.Control
+              aria-label="Text input with dropdown button"
+              type="number"
+              placeholder="Enter your Consumption"
+              onChange={getData}
+              min = {0}
+            />
+            <select className="dropdown" onChange={unitHandler}>
+              {unitOptions.map((currElement) => {
+                return <option key={currElement}>{currElement}</option>;
+              })}
+            </select>
+
+          </InputGroup>
+          {title !== "Dairy" ? `Your Carbon emission is ${result} kg/month from ${props.title}`:`Your Carbon emission is ${result} kg/month from ${dairyItem}`}
+        </ListGroup.Item>
+      </ListGroup>
+    </div>
+  )
+}
+
+export default InputComponent
