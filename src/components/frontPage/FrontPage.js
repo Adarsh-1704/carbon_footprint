@@ -1,8 +1,7 @@
 import React from "react";
 import carbon_1 from "./images/carbon-footprint-1.png";
-import carbon_2 from "./images/carbon-footprint-2.jpg";
 import "./FrontPage.scss";
-import { Col, Row } from "react-bootstrap";
+import carbon_2 from "./images/carbon-footprint-2.jpg";
 
 function FrontPage() {
   return (
@@ -19,21 +18,26 @@ function FrontPage() {
         </h3>
         {/* </div> */}
       </div>
-      <div className="para-div">
-        <h3>What is Carbon Footprint ?</h3>
-        <p>
-          "Carbon footprint" refers to the total amount of greenhouse gases,
-          particularly carbon dioxide, that are emitted into the atmosphere by
-          an individual, organization, or product. This measure is used to
-          assess the impact that human activities have on the environment and
-          climate change.
-        </p>
-        <p>
-          Unlocking the Secrets of Climate Change: Understanding Carbon
-          Footprint. Learn How Human Activities Contribute to Greenhouse Gas
-          Emissions. Calculate Your Impact, Take Action, and Be Part of the
-          Solution for a Greener Future!
-        </p>
+      <div className="d-flex p-1 container" style={{border: "1px solid black"}}>
+        <div className="para-div container mt-3 p-5">
+          <h3>What is Carbon Footprint ?</h3>
+          <p>
+            "Carbon footprint" refers to the total amount of greenhouse gases,
+            particularly carbon dioxide, that are emitted into the atmosphere by
+            an individual, organization, or product. This measure is used to
+            assess the impact that human activities have on the environment and
+            climate change.
+          </p>
+          <p>
+            Unlocking the Secrets of Climate Change: Understanding Carbon
+            Footprint. Learn How Human Activities Contribute to Greenhouse Gas
+            Emissions. Calculate Your Impact, Take Action, and Be Part of the
+            Solution for a Greener Future!
+          </p>
+        </div>
+        <div className="d-flex align-items-center justify-content-center">
+          <img src={carbon_2} alt="foot" style={{height: "80%", right: ""}}/>
+        </div>
       </div>
       {/* <Row className="my-5">
         <Col>
